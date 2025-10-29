@@ -7,14 +7,19 @@ body {
     font-family:Saira
 }
 
-#title {
-    animation: intro 2s ease-in-out;
+#title span {
+    display: inline-block;
+    animation: intro 3s ease-in-out;
+  }
+
+#title span:nth-child(2) {
+    animation-delay: 0.5s;
 }
 
 @keyframes intro {
 0% {
     opacity: 0;
-    transform: translateY(-28px)
+    transform: translateY(20px)
 }
 100% {
     opacity: 1;
@@ -24,14 +29,32 @@ body {
 }
 
 img {
-    width: 90%;
+    width: 50%;
     margin-left: 5%;
     margin-right: 5%;
     border-radius: 20px;
-    height: auto;
+    height: 50%;
+    transition: transform 0.4s ease, filter 0.4s ease;
 }
 
 img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+    cursor: pointer;
+}
+
+button {
+    font-family:Saira;
+    background-color:rgb(255, 255, 255);
+    color:dimgray;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background-color 0.3 ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(230,230,230);
     transform: scale(1.05);
     cursor: pointer;
 }
